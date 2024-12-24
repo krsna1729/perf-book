@@ -1,10 +1,7 @@
----
-typora-root-url: ..\..\img
----
+## Mispredicted Branch {#sec:BbMisp}
 
-## Mispredicted branch {#sec:BbMisp}
+Modern CPUs try to predict the outcome of a conditional branch instruction (taken or not taken). For example, when the processor sees code like this:
 
-Modern CPUs try to predict the outcome of a branch instruction (taken or not taken). For example, when the processor sees code like this:
 ```bash
 dec eax
 jz .zero
@@ -14,9 +11,12 @@ zero:
 # eax is 0
 ```
 
-Instruction `jz` is a branch instruction, and in order to increase performance, modern CPU architectures try to predict the result of such a branch. This is also called "Speculative Execution". The processor will speculate that, for example, the branch will not be taken and will execute the code that corresponds to the situation when `eax is not 0`. However, if the guess was wrong, this is called "branch misprediction", and the CPU is required to undo all the speculative work that it has done recently. This typically involves a penalty between 10 and 20 clock cycles.
+In the above example, the `jz` instruction is a conditional branch. To increase performance, modern processors will try to guess the outcome every time they see a branch instruction. This is called *Speculative Execution* which we discussed in [@sec:SpeculativeExec]. The processor will speculate that, for example, the branch will not be taken and will execute the code that corresponds to the situation when `eax is not 0`. However, if the guess is wrong, this is called *branch misprediction*, and the CPU is required to undo all the speculative work that it has done recently. 
+
+A mispredicted branch typically involves a penalty between 10 and 25 clock cycles. First, all the instructions that were fetched and executed based on the incorrect prediction need to be flushed from the pipeline. After that, some buffers may require cleanup to restore the state from where the bad speculation started.
 
 Linux `perf` users can check the number of branch mispredictions by running:
+
 ```bash
 $ perf stat -e branches,branch-misses -- a.exe
    358209  branches
@@ -24,5 +24,3 @@ $ perf stat -e branches,branch-misses -- a.exe
 # or simply do:
 $ perf stat -- a.exe
 ```
-
-\sectionbreak

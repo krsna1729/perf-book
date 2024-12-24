@@ -42,6 +42,7 @@
     stepnumber=1,
     numbersep=5pt,
     backgroundcolor=\color[RGB]{248,248,248},
+    keepspaces=true,
     showspaces=false,
     showstringspaces=false,
     showtabs=false,
@@ -54,6 +55,7 @@
     linewidth=\textwidth,
     basewidth=0.5em,
     extendedchars=false,
+    belowskip=-0.3 \baselineskip
 }
 \newcommand{\passthrough}[1]{#1}
 
@@ -68,7 +70,6 @@
 \fancyhead[RO]{\textit{ \nouppercase{\rightmark}} }
 
 \usepackage[nottoc]{tocbibind}
-\usepackage[authoryear]{natbib}
 
 \usepackage[most]{tcolorbox}
 \newtcolorbox{myquote}{colback=yellow!7!white,grow to right by=-10mm,grow to left by=-10mm, boxrule=0pt,boxsep=0pt,breakable}
@@ -98,15 +99,22 @@
 \@ifpackageloaded{subfig}{}{\usepackage{subfig}}
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \captionsetup[subfloat]{margin=0.5em}
+\captionsetup{font=small}
+\captionsetup{justification=centering}
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
-\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{htb}{lop}}{\newfloat{codelisting}{htb}{lop}[chapter]}
 \floatname{codelisting}{Listing}
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+% Redefine the default htbp figure placement 
+\def\fps@figure{htb}
 \makeatother
 
 \usepackage{graphicx}
-\graphicspath{{img/}}
+\graphicspath{{chapters/0-Preface}}
+
+% for wrapping text around figures
+\usepackage{wrapfig}
 
 % support for glossary
 %\usepackage{glossaries}
@@ -118,9 +126,13 @@
 \usepackage{multicol}
 
 \usepackage{footnotebackref}
-
+\interfootnotelinepenalty=10000
 \usepackage{bookmark}
 \usepackage{etoolbox}
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1.5pt] (char) {#1};}}
 
 \makeatletter
 \newcommand*{\AddChapterPrefixInBookmarks}{%
@@ -136,6 +148,16 @@
   numbered,
   addtohook=\AddChapterPrefixInBookmarks,
 }
+
+% Set counter to include chapter number
+\usepackage{chngcntr} 
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{codelisting}{section}
+
+% I added this line to help resolve color printing issue by removing image transparency.
+% Not sure if it helps though.
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>} 
 
 % this one to skip adding the title and the author
 \AtBeginDocument{\let\maketitle\relax}

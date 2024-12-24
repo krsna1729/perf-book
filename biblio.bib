@@ -1,30 +1,10 @@
 % Encoding: UTF-8
 
-@Article{Lopes2018,
-  author        = {Nuno P. Lopes and John Regehr},
-  title         = {Future Directions for Optimizing Compilers},
-  year          = {2018},
-  __markedentry = {[dbakhval:]},
-  abstract      = {As software becomes larger, programming languages become higher-level, and processors continue to fail to be clocked faster, we'll increasingly require compilers to reduce code bloat, eliminate abstraction penalties, and exploit interesting instruction sets. At the same time, compiler execution time must not increase too much and also compilers should never produce the wrong output. This paper examines the problem of making optimizing compilers faster, less buggy, and more capable of generating high-quality output.},
-  date          = {2018-09-06},
-  eprint        = {http://arxiv.org/abs/1809.02161v1},
-  eprintclass   = {cs.PL},
-  eprinttype    = {arXiv},
-  file          = {:http\://arxiv.org/pdf/1809.02161v1:PDF},
-  keywords      = {cs.PL},
-}
-
-@Manual{IntelSDM,
-  title        = {Intel® 64 and IA-32 Architectures Software Developer Manuals},
-  organization = {Intel® Corporation},
-  year         = {2020},
-  url          = {https://software.intel.com/en-us/articles/intel-sdm},
-}
-
 @Manual{IntelOptimizationManual,
+  author       = {Intel},
   title        = {Intel® 64 and IA-32 Architectures Optimization Reference Manual},
   organization = {Intel® Corporation},
-  year         = {2020},
+  year         = {2023},
   url          = {https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html},
 }
 
@@ -37,17 +17,31 @@
 }
 
 @Manual{Domo2017,
+  author       = {domo.com},
   title        = {Data Never Sleeps 5.0},
   organization = {Domo, Inc},
   year         = {2017},
   url          = {https://www.domo.com/learn/data-never-sleeps-5?aid=ogsm072517_1&sf100871281=1},
 }
 
-@Manual{Statista2018,
-  title  = {Volume of data/information created worldwide from 2010 to 2025},
+@Manual{Statista2024,
+  author       = {statista.com},
+  title  = {Volume of data/information created, captured, copied, and consumed worldwide from 2010 to 2020, with forecasts from 2021 to 2025},
   organization = {Statista, Inc},
-  year   = {2018},
+  year   = {2024},
   url    = {https://www.statista.com/statistics/871513/worldwide-data-created/},
+}
+
+@Article{Lopes2018,
+  author        = {Nuno P. Lopes and John Regehr},
+  title         = {Future Directions for Optimizing Compilers},
+  year          = {2018},
+  date          = {2018-09-06},
+  eprint        = {http://arxiv.org/abs/1809.02161v1},
+  eprintclass   = {cs.PL},
+  eprinttype    = {arXiv},
+  file          = {:http\://arxiv.org/pdf/1809.02161v1:PDF},
+  keywords      = {cs.PL},
 }
 
 @Article{Mytkowicz09,
@@ -91,21 +85,12 @@
   title         = {Robust benchmarking in noisy environments},
   year          = {2016},
   __markedentry = {[dbakhval:6]},
-  abstract      = {We propose a benchmarking strategy that is robust in the presence of timer error, OS jitter and other environmental fluctuations, and is insensitive to the highly nonideal statistics produced by timing measurements. We construct a model that explains how these strongly nonideal statistics can arise from environmental fluctuations, and also justifies our proposed strategy. We implement this strategy in the BenchmarkTools Julia package, where it is used in production continuous integration (CI) pipelines for developing the Julia language and its ecosystem.},
   date          = {2016-08-15},
   eprint        = {http://arxiv.org/abs/1608.04295v1},
   eprintclass   = {cs.PF},
   eprinttype    = {arXiv},
   file          = {:http\://arxiv.org/pdf/1608.04295v1:PDF},
   keywords      = {cs.PF, 68N30, B.8.1; D.2.5},
-}
-
-@dataset{dataset,
-author = {Yasin, Ahmad},
-year = {2016},
-month = {10},
-pages = {},
-title = {TopDown-Yasin-ISPASS14-data}
 }
 
 @inproceedings{TMA_ISPASS,
@@ -118,13 +103,6 @@ isbn = {978-1-4799-3606-9},
 doi = {10.1109/ISPASS.2014.6844459}
 }
 
-@Article{LBR2016,
-  author = {Andi Kleen},
-  title  = {An introduction to last branch records},
-  year   = {2016},
-  url    = {https://lwn.net/Articles/680985/},
-}
-
 @Article{LemireBranchless,
   author = {Daniel Lemire},
   title  = {Making Your Code Faster by Taming Branches},
@@ -132,17 +110,11 @@ doi = {10.1109/ISPASS.2014.6844459}
   url    = {https://www.infoq.com/articles/making-code-faster-taming-branches/},
 }
 
-@Article{IntelAvoidingBrMisp,
-  author = {Rajiv Kapoor},
-  title  = {Avoiding the Cost of Branch Misprediction},
-  year   = {2009},
-  url    = {https://software.intel.com/en-us/articles/avoiding-the-cost-of-branch-misprediction},
-}
-
 @inproceedings{Nowak2014TheOO,
-  title={The overhead of profiling using PMU hardware counters},
   author={Andrzej Nowak and Georgios Bitzes},
-  year={2014}
+  title={The overhead of profiling using PMU hardware counters},
+  year={2014},
+  url={https://zenodo.org/record/10800/files/TheOverheadOfProfilingUsingPMUhardwareCounters.pdf},
 }
 
 @inproceedings{HfSort,
@@ -155,7 +127,8 @@ booktitle = {Proceedings of the 2017 International Symposium on Code Generation 
 pages = {233–244},
 numpages = {12},
 location = {Austin, USA},
-series = {CGO ’17}
+series = {CGO ’17},
+url={https://ieeexplore.ieee.org/document/7863743},
 }
 
 @inproceedings{AutoFDO,
@@ -164,7 +137,8 @@ author	= {Dehao Chen and David Xinliang Li and Tipp Moseley},
 year	= {2016},
 booktitle	= {CGO 2016 Proceedings of the 2016 International Symposium on Code Generation and Optimization},
 pages	= {12-23},
-address	= {New York, NY, USA}
+address	= {New York, NY, USA},
+url={https://ieeexplore.ieee.org/document/7559528},
 }
 
 @article{BBReordering,
@@ -198,37 +172,28 @@ address	= {New York, NY, USA}
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{Prefetching,
-author = {Iacobovici, Sorin and Kadambi, Sudarshan and Chou, Yuan and Abraham, Santosh},
-year = {2004},
-month = {01},
-pages = {1-11},
-title = {Effective stream-based and execution-based data prefetching},
-doi = {10.1145/1006209.1006211}
-}
-
-@online{PrefetchSlides,
-author = {{Nima Honarmand}},
-title = {Memory Prefetching},
-url = {https://compas.cs.stonybrook.edu/~nhonarmand/courses/sp15/cse502/slides/13-prefetch.pdf},
-organization = {Stony Brook University},
-date = {2015-03-01}
-}
-
 @book{Hennessy,
 author = {Hennessy, John L. and Patterson, David A.},
-title = {Computer Architecture, Fifth Edition: A Quantitative Approach},
-year = {2011},
-isbn = {012383872X},
+title = {Computer Architecture, Sixth Edition: A Quantitative Approach},
+year = {2017},
+isbn = {0128119055},
 publisher = {Morgan Kaufmann Publishers Inc.},
 address = {San Francisco, CA, USA},
-edition = {5th}
+edition = {6th},
+}
+
+@book{ShenLipasti,
+  title={Modern Processor Design: Fundamentals of Superscalar Processors},
+  author={Shen, J.P. and Lipasti, M.H.},
+  isbn={1-4786-0783-1},
+  year={2013},
+  publisher={Waveland Press, Inc.}
 }
 
 @misc{fogOptimizeCpp,
   title={Optimizing software in C++: An optimization guide for Windows, Linux and Mac platforms},
   author={Fog, Agner},
-  year={2004},
+  year={2023},
   url = {https://www.agner.org/optimize/optimizing_cpp.pdf},
 }
 
@@ -237,18 +202,10 @@ edition = {5th}
   author={Fog, Agner},
   journal={Copenhagen University College of Engineering},
   url = {https://www.agner.org/optimize/microarchitecture.pdf},
-  year={2012}
+  year={2023}
 }
 
-@article{fogInstructions,
-  title={Instruction tables: Lists of instruction latencies, throughputs and micro-operation breakdowns for Intel, AMD and VIA CPUs},
-  author={Fog, Agner and others},
-  journal={Copenhagen University College of Engineering},
-  url = {https://www.agner.org/optimize/instruction_tables.pdf},
-  year={2011}
-}
-
-@article{GooglePaper,
+@article{GoogleProfiling,
 author = {Kanev, Svilen and Darago, Juan Pablo and Hazelwood, Kim and Ranganathan, Parthasarathy and Moseley, Tipp and Wei, Gu-Yeon and Brooks, David},
 title = {Profiling a Warehouse-Scale Computer},
 year = {2015},
@@ -272,7 +229,8 @@ numpages = {12}
     year={2015},
     eprint={1509.05053},
     archivePrefix={arXiv},
-    primaryClass={cs.DS}
+    primaryClass={cs.DS},
+    url={https://arxiv.org/ftp/arxiv/papers/1509/1509.05053.pdf},
 }
 
 @article{GoogleWideProfiling,
@@ -284,27 +242,22 @@ journal	= {IEEE Micro},
 pages	= {65-79}
 }
 
-@Manual{IntelCpuMetrics,
-  title={CPU Metrics Reference},
-  organization = {Intel® Corporation},
-  year={2020},
-  url = {https://software.intel.com/en-us/vtune-help-cpu-metrics-reference}
-}
-
-@Manual{IntelVTuneGuide,
-  title={Intel® VTune™ Profiler User Guide},
-  organization = {Intel® Corporation},
-  year={2020},
-  url = {https://software.intel.com/content/www/us/en/develop/documentation/vtune-help/top/analyze-performance/hardware-event-based-sampling-collection.html}
-}
-
-@inproceedings{CozPaper,
-author = {Curtsinger, Charlie and Berger, Emery},
-year = {2015},
-month = {10},
-pages = {184-197},
-title = {Coz: Finding Code that Counts with Causal Profiling},
-doi = {10.1145/2815400.2815409}
+@article{CozPaper,
+author = {Curtsinger, Charlie and Berger, Emery D.},
+title = {Coz: Finding Code That Counts with Causal Profiling},
+year = {2018},
+issue_date = {June 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {61},
+number = {6},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3205911},
+doi = {10.1145/3205911},
+journal = {Commun. ACM},
+month = {may},
+pages = {91–99},
+numpages = {9}
 }
 
 @book{Akinshin2019,
@@ -316,6 +269,26 @@ doi = {10.1145/2815400.2815409}
   pages     = {690},
   isbn      = {978-1-4842-4940-6},
   doi       = {10.1007/978-1-4842-4941-3}
+}
+
+@book{OptimizingCompilersForModernArchs,
+  author    = {Allen, Randy and Kennedy, Ken},
+  title     = {Optimizing Compilers for Modern Architectures: A Dependence-based Approach},
+  publisher = {Morgan-Kaufmann},
+  year      = {2001},
+  edition   = {1},
+  pages     = {816},
+  isbn      = {978-1558602861},
+}
+
+@book{HackersDelight,
+  author    = {Henry S. Warren}, 
+  title     = {Hacker's Delight},
+  publisher = {Addison-Wesley},
+  year      = {2012},
+  edition   = {2},
+  pages     = {512},
+  isbn      = {978-0321842688},
 }
 
 @book{SystemsPerformance,
@@ -355,26 +328,6 @@ numpages = {12},
 keywords = {performance, measurement, bias},
 location = {Washington, DC, USA},
 series = {ASPLOS XIV}
-}
-
-@inproceedings{STABILIZER,
-author = {Curtsinger, Charlie and Berger, Emery},
-year = {2013},
-month = {03},
-pages = {219-228},
-title = {STABILIZER: statistically sound performance evaluation},
-volume = {48},
-journal = {ACM SIGPLAN Notices},
-doi = {10.1145/2451116.2451141}
-}
-
-@misc{RobustBenchmarking,
-    title={Robust benchmarking in noisy environments},
-    author={Jiahao Chen and Jarrett Revels},
-    year={2016},
-    eprint={1608.04295},
-    archivePrefix={arXiv},
-    primaryClass={cs.PF}
 }
 
 @misc{IntelBlueprint,
@@ -489,17 +442,25 @@ url = {http://papers.nips.cc/paper/9337-a-zero-positive-learning-approach-for-di
     year={2019},
     eprint={1903.08762},
     archivePrefix={arXiv},
-    primaryClass={stat.AP}
+    primaryClass={stat.AP},
+    url={https://arxiv.org/abs/1903.08762},
 }
 
-@article{IntelPTPaper,  
-author={S. D. {Sharma} and M. {Dagenais}},  
-journal={The Journal of Engineering},   
-title={Hardware-assisted instruction profiling and latency detection},   
-year={2016},  
-volume={2016},  
-number={10},  
-pages={367-376},
+@article{IntelPTPaper,
+   author = {Suchakrapani Datt Sharma},
+   author = {Michel Dagenais},
+   keywords = {latency detection;syscall latency profiling;fine-tuning hardware tracing;hardware-assisted instruction profiling;hardware-based tracing;software tracing;sixth generation Intel processors;optimum utilisation;},
+   language = {English},
+   title = {Hardware-assisted instruction profiling and latency detection},
+   journal = {The Journal of Engineering},
+   issue = {10},   
+   volume = {2016},
+   year = {2016},
+   month = {October},
+   pages = {367-376(9)},
+   publisher ={Institution of Engineering and Technology},
+   copyright = {This is an open access article published by the IET under the Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)},
+   url = {https://digital-library.theiet.org/content/journals/10.1049/joe.2016.0127}
 }
 
 @inproceedings{PMC_virtual,
@@ -512,7 +473,8 @@ booktitle = {Proceedings of the 2nd USENIX Conference on Hot Topics in Cloud Com
 pages = {2},
 numpages = {1},
 location = {Boston, MA},
-series = {HotCloud'10}
+series = {HotCloud'10},
+url={https://www.usenix.org/legacy/event/hotcloud10/tech/full_papers/Du.pdf},
 }
 
 @article{Mula_Lemire_2019,
@@ -531,13 +493,13 @@ series = {HotCloud'10}
 }
 
 @inproceedings{ISPC_Paper,
-  author={M. {Pharr} and W. R. {Mark}},
+  author={Pharr, Matt and Mark, William R.},
   booktitle={2012 Innovative Parallel Computing (InPar)}, 
   title={ispc: A SPMD compiler for high-performance CPU programming}, 
   year={2012},
-  volume={},
-  number={},
-  pages={1-13}
+  pages={1-13},
+  doi={10.1109/InPar.2012.6339601},
+  url={https://ispc.github.io/papers/ispc_inpar_2012.pdf},
 }
 
 @article{CacheLocking,
@@ -569,5 +531,316 @@ doi = {10.1145/2858792}
   year={2012},
   volume={22}
 }
+
+@inproceedings{Luo2015,
+  author={Luo, Taowei and Wang, Xiaolin and Hu, Jingyuan and Luo, Yingwei and Wang, Zhenlin},
+  booktitle={2015 15th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing}, 
+  title={Improving TLB Performance by Increasing Hugepage Ratio}, 
+  year={2015},
+  volume={},
+  number={},
+  pages={1139-1142},
+  doi={10.1109/CCGrid.2015.36}
+}
+
+@article{Seznec2006,
+  title={A case for (partially) TAgged GEometric history length branch prediction},
+  author={Andr{\'e} Seznec and Pierre Michaud},
+  journal={J. Instr. Level Parallelism},
+  year={2006},
+  volume={8},
+  url={https://inria.hal.science/hal-03408381/document},
+}
+
+@INPROCEEDINGS{Jimenez2001,
+  author={Jimenez, D.A. and Lin, C.},
+  booktitle={Proceedings HPCA Seventh International Symposium on High-Performance Computer Architecture}, 
+  title={Dynamic branch prediction with perceptrons}, 
+  year={2001},
+  volume={},
+  number={},
+  pages={197-206},
+  doi={10.1109/HPCA.2001.903263}
+}
+
+
+@Comment{TODO: this one is not used}
+
+@misc{RobustBenchmarking,
+    title={Robust benchmarking in noisy environments},
+    author={Jiahao Chen and Jarrett Revels},
+    year={2016},
+    eprint={1608.04295},
+    archivePrefix={arXiv},
+    primaryClass={cs.PF}
+}
+
+@Manual{AMDProgrammingManual,
+  author       = {AMD},
+  title        = {AMD64 Architecture Programmer's Manual},
+  organization = {Advanced Micro Devices, Inc.},
+  year         = {2023},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/programmer-references/24593.pdf},
+}
+
+@Manual{AMDUprofManual,
+  author       = {AMD},
+  title        = {AMD uProf User Guide, Revision 4.2},
+  organization = {Advanced Micro Devices, Inc.},
+  year         = {2024},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/developer/version-4-2-documents/uprof/uprof-user-guide-v4.2.pdf},
+}
+
+@Manual{Armv9ManualSupplement,
+  author       = {Arm},
+  title        = {Arm Architecture Reference Manual Supplement Armv9},
+  organization = {Arm Limited},
+  year         = {2022},
+  url          = {https://documentation-service.arm.com/static/632dbdace68c6809a6b41710?token=},
+}
+
+@Manual{ARMNeoverseV1,
+  author       = {Arm},
+  title        = {Arm Neoverse™ V1 PMU Guide, Revision: r1p2},
+  organization = {Arm Limited},
+  year         = {2022},
+  url          = {https://developer.arm.com/documentation/PJDOC-1063724031-605393/2-0/?lang=en},
+}
+
+@Manual{ARMNeoverseV1TopDown,
+  author       = {Arm},
+  title        = {Arm Neoverse V1 Core: Performance Analysis Methodology},
+  organization = {Arm Limited},
+  year         = {2023},
+  url          = {https://armkeil.blob.core.windows.net/developer/Files/pdf/white-paper/neoverse-v1-core-performance-analysis.pdf},
+}
+
+@Manual{ARMSPE,
+  author       = {Arm},
+  title        = {Arm Statistical Profiling Extension: Performance Analysis Methodology},
+  organization = {Arm Limited},
+  year         = {2023},
+  url          = {https://developer.arm.com/documentation/109429/latest/},
+}
+
+@ARTICLE{ComparisonPEBSIBS,
+  author={Sasongko, Muhammad Aditya and Chabbi, Milind and Kelly, Paul H J and Unat, Didem},
+  journal={IEEE Transactions on Parallel and Distributed Systems}, 
+  title={Precise Event Sampling on AMD Versus Intel: Quantitative and Qualitative Comparison}, 
+  year={2023},
+  volume={34},
+  number={5},
+  pages={1594-1608},
+  url={https://ieeexplore.ieee.org/document/10068807},
+  doi={10.1109/TPDS.2023.3257105}
+}
+
+@inproceedings{QoSXeon,
+  title        = {{Cache QoS}: From concept to reality in the {Intel® Xeon® processor E5-2600} v3 product family},
+  author       = {A. {Herdrich} and others},
+  year         = 2016,
+  booktitle    = {HPCA},
+  pages        = {657--668},
+  url          = {https://ieeexplore.ieee.org/document/7446102}
+}
+
+@inproceedings{QoSThunderX,
+  title        = {{SWAP:} Effective Fine-Grain Management of Shared Last-Level Caches with Minimum Hardware Support},
+  author       = {Wang, Xiaodong and others},
+  year         = 2017,
+  booktitle    = {HPCA},
+  pages        = {121--132},
+  url          = {https://ieeexplore.ieee.org/document/7920819}
+}
+
+@misc{amd_milan,
+  title        = {{AMD EPYC} 7003 Series Microarchitecture Overview},
+  author       = {Chris Karamatas},
+  year         = 2022,
+  month        = Mar,
+  howpublished = {Pub. 57075, rev 3.0},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/white-papers/overview-amd-epyc7003-series-processors-microarchitecture.pdf}
+}
+
+@misc{amd_ppr,
+  title        = {{Processor Programming Reference (PPR)} for {AMD} Family 19h Model 01h (55898)},
+  year         = 2021,
+  month        = may,
+  author       = {{Advanced Micro Devices}},
+  howpublished = {B1 Rev 0.50},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/programmer-references/55898_B1_pub_0_50.zip}
+}
+
+@misc{amd_zen4,
+  title        = {{Software Optimization Guide for the AMD Zen4 Microarchitecture}},
+  year         = 2023,
+  month        = Jan,
+  author       = {{Advanced Micro Devices}},
+  howpublished = {Rev 1.00},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/software-optimization-guides/57647.zip}
+}
+
+@misc{QoSAMD,
+  title        = {{AMD64} Technology Platform Quality of Service Extensions},
+  author       = {{Advanced Micro Devices}},
+  year         = 2022,
+  month        = feb,
+  howpublished = {Pub. 56375, rev 1.01},
+  url          = {https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/other/56375_1_03_PUB.pdf}
+}
+
+@article{MemCharacterizationSPEC2006,
+  title        = {{Memory hierarchy characterization of SPEC CPU2006 and SPEC CPU2017 on the Intel Xeon Skylake-SP}},
+  author       = {Navarro-Torres, Agustín AND others},
+  year         = 2019,
+  journal      = {PLOS ONE},
+  pages        = {1--24},
+  url          = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0220135}
+}
+
+@Article{Balancer2023,
+  author       = {Navarro-Torres, Agust{\'i}n and Alastruey-Bened{\'e}, Jes{\'u}s and Ib{\'a}{\~{n}}ez, Pablo and Vi{\~{n}}als-Y{\'u}fera, V{\'i}ctor},
+  title        = {BALANCER: bandwidth allocation and cache partitioning for multicore processors},
+  journal      = {The Journal of Supercomputing},
+  year         = {2023},
+  month        = {Jun},
+  day          = {01},
+  volume       = {79},
+  number       = {9},
+  pages        = {10252-10276},
+  issn         = {1573-0484},
+  doi          = {10.1007/s11227-023-05070-0},
+  url          = {https://doi.org/10.1007/s11227-023-05070-0}
+}
+
+@online{MICRO23DebbieMarr,
+  title = {Keynote: Architecting for Power-Efficiency in General-Purpose Computing},
+  year = {2023},
+  organization = {Youtube},
+  author = {Debbie Marr},
+  url = {https://youtu.be/IktNjMxJYPE?t=2599},
+}
+
+@INPROCEEDINGS{RISCvsCISC2013,
+  author={Blem, Emily and Menon, Jaikrishnan and Sankaralingam, Karthikeyan},
+  booktitle={2013 IEEE 19th International Symposium on High Performance Computer Architecture (HPCA)}, 
+  title={Power struggles: Revisiting the RISC vs. CISC debate on contemporary ARM and x86 architectures}, 
+  year={2013},
+  volume={},
+  number={},
+  pages={1-12},
+  url={https://ieeexplore.ieee.org/document/6522302},
+  keywords={Abstracts;Reduced instruction set computing;Mobile communication;Servers},
+  doi={10.1109/HPCA.2013.6522302}
+}
+
+@inproceedings{RISCVvsAArch642023,
+author = {Weaver, Daniel and McIntosh-Smith, Simon},
+title = {An Empirical Comparison of the RISC-V and AArch64 Instruction Sets},
+year = {2023},
+isbn = {9798400707858},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3624062.3624233},
+doi = {10.1145/3624062.3624233},
+booktitle = {Proceedings of the SC '23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis},
+pages = {1557–1565},
+numpages = {9},
+keywords = {AArch64, Comparison, Performance, RISC-V, SimEng Simulation},
+location = {<conf-loc>, <city>Denver</city>, <state>CO</state>, <country>USA</country>, </conf-loc>},
+series = {SC-W '23}
+}
+
+@misc{CodeDensityCISCvsRISC,
+  title={Debunking CISC vs RISC code density},
+  author={Geelnard, Marcus},
+  year={2022},
+  url = {https://www.bitsnbites.eu/cisc-vs-risc-code-density/},
+}
+
+@misc{ChipsAndCheesex86,
+  title={Why x86 Doesn’t Need to Die},
+  author={ChipsAndCheese},
+  year={2024},
+  url = {https://chipsandcheese.com/2024/03/27/why-x86-doesnt-need-to-die/},
+}
+
+@Manual{AppleOptimizationGuide,
+  author       = {Apple},
+  title        = {Apple Silicon CPU Optimization Guide: 3.0},
+  organization = {Apple® Inc.},
+  year         = {2024},
+  url          = {https://developer.apple.com/documentation/apple-silicon/cpu-optimization-guide},
+}
+
+@article{SurveyOfPolyhedralCompilers,
+author = {Thangamani, Arun and Loechner, Vincent and Genaud, St\'{e}phane},
+title = {A Survey of General-purpose Polyhedral Compilers},
+year = {2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3674735},
+abstract = {Since the 1990’s many implementations of polyhedral compilers have been written and distributed, either as source-to-source translating compilers or integrated into wider purpose compilers. This paper provides a survey on those various available implementations as of today, 2024. We list and describe most commonly available polyhedral schedulers and compiler implementations. Then, we compare the general-purpose polyhedral compilers using two main criteria, robustness and performance, on the PolyBench/C set of benchmarks.},
+journal = {ACM Trans. Archit. Code Optim.},
+}
+
+@article{Knuth1974StructuredPW,
+  title={Structured Programming with go to Statements},
+  author={Donald Ervin Knuth},
+  journal={ACM Comput. Surv.},
+  year={1974},
+  volume={6},
+  pages={261-301},
+  url={https://api.semanticscholar.org/CorpusID:207630080}
+}
+
+@article{MeasureOneLevelDeeper,
+author = {Ousterhout, John},
+title = {Always measure one level deeper},
+year = {2018},
+issue_date = {July 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {61},
+number = {7},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3213770},
+doi = {10.1145/3213770},
+abstract = {Performance measurements often go wrong, reporting surface-level results that are more marketing than science.},
+journal = {Commun. ACM},
+month = jun,
+pages = {74–83},
+numpages = {10}
+}
+
+@article{RooflinePaper,
+author = {Williams, Samuel and Waterman, Andrew and Patterson, David},
+title = {Roofline: an insightful visual performance model for multicore architectures},
+year = {2009},
+issue_date = {April 2009},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {52},
+number = {4},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/1498765.1498785},
+doi = {10.1145/1498765.1498785},
+abstract = {The Roofline model offers insight on how to improve the performance of software and hardware.},
+journal = {Commun. ACM},
+month = apr,
+pages = {65–76},
+numpages = {12}
+}
+
+@book{DickSitesBook,
+  title={Understanding Software Dynamics},
+  author={Sites, Richard},
+  isbn={9780137589739},
+  series={Addison-Wesley professional computing series},
+  url={https://books.google.com/books?id=TklozgEACAAJ},
+  year={2022},
+  publisher={Addison-Wesley}
+}
+
 
 @Comment{jabref-meta: databaseType:bibtex;}

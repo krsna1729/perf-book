@@ -1,0 +1,11 @@
+## What Is Performance Analysis?
+
+Have you ever found yourself debating with a coworker about the performance of a certain piece of code? Then you probably know how hard it is to predict which code is going to work the best. With so many moving parts inside modern processors, even small tweaks to code can trigger noticeable performance changes. Relying on intuition when optimizing an application typically results in random "fixes" without real performance impact.
+
+Inexperienced developers sometimes make changes in their code and claim it *should* run faster. One such example is replacing `i++` (post-increment) with `++i` (pre-increment) all over the code base (assuming that the previous value of `i` is not used). In the general case, this change will make no difference to the generated code: every decent optimizing compiler will recognize that the previous value of `i` is not used and will eliminate redundant copies anyway. The first piece of advice in this book is: don't solely rely on your intuition. *Always measure.*
+
+Many micro-optimization tricks that circulate around the world were valid in the past, but current compilers have already learned them. Additionally, some people tend to overuse legacy bit-twiddling tricks. One such example is the XOR swap idiom.[^2] In reality, simple `std::swap` produces equivalent or faster code. Such accidental changes likely won’t improve the performance of an application. Finding the right place to tune should be the result of careful performance analysis, not intuition or guessing.
+
+Performance analysis is a process of collecting information about how a program executes and interpreting it to find optimization opportunities. Any change that ends up being made in the source code of a program should be driven by analyzing and interpreting collected data. We will show you how to use performance analysis techniques to discover optimization opportunities even in a large and unfamiliar codebase. There are many performance analysis methodologies. Depending on the problem, some will be more efficient than others. With experience, you will develop your own strategies about when to use each approach.
+
+[^2]: XOR-based swap idiom - [https://en.wikipedia.org/wiki/XOR_swap_algorithm](https://en.wikipedia.org/wiki/XOR_swap_algorithm)
